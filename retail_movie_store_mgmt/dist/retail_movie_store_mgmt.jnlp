@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="retail_movie_store_mgmt.jnlp">
+  <information>
+    <title>retail_movie_store_mgmt</title>
+    <vendor>Ian Mburu</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\retail_movie_store_mgmt-Preloader.jar" size="4848" download="progress" />
+    <jar href="lib\DynamicJasper-5.1.2.jar" size="396012" download="eager" />
+    <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
+    <jar href="lib\animatefx-1.2.0.jar" size="85592" download="eager" />
+    <jar href="lib\bcprov-jdk15on-1.52.jar" size="2902942" download="eager" />
+    <jar href="lib\castor-core-1.3.3.jar" size="49513" download="eager" />
+    <jar href="lib\castor-xml-1.3.3.jar" size="872827" download="eager" />
+    <jar href="lib\cglib-2.2.jar" size="278385" download="eager" />
+    <jar href="lib\commons-beanutils-1.7.0.jar" size="188671" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-collections4-4.1.jar" size="751238" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-io-1.3.1.jar" size="83613" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.0.3.jar" size="31605" download="eager" />
+    <jar href="lib\controlsfx-8.40.13.jar" size="1213306" download="eager" />
+    <jar href="lib\core-3.2.1.jar" size="544403" download="eager" />
+    <jar href="lib\ecj-4.3.1.jar" size="1830791" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\gson-2.8.6.jar" size="240255" download="eager" />
+    <jar href="lib\icu4j-57.1.jar" size="11289823" download="eager" />
+    <jar href="lib\itext-2.1.7.js6.jar" size="1131480" download="eager" />
+    <jar href="lib\jackson-annotations-2.1.4.jar" size="34476" download="eager" />
+    <jar href="lib\jackson-core-2.1.4.jar" size="206866" download="eager" />
+    <jar href="lib\jackson-databind-2.1.4.jar" size="926562" download="eager" />
+    <jar href="lib\jakarta-regexp-1.4.jar" size="28576" download="eager" />
+    <jar href="lib\jasperreports-6.4.1.jar" size="5580496" download="eager" />
+    <jar href="lib\javax.inject-1.jar" size="2497" download="eager" />
+    <jar href="lib\jcommon-1.0.23.jar" size="330246" download="eager" />
+    <jar href="lib\jfoenix-8.0.9.jar" size="2688910" download="eager" />
+    <jar href="lib\jfreechart-1.0.19.jar" size="1565065" download="eager" />
+    <jar href="lib\lucene-analyzers-common-4.5.1.jar" size="1586103" download="eager" />
+    <jar href="lib\lucene-core-4.5.1.jar" size="2297477" download="eager" />
+    <jar href="lib\lucene-queries-4.5.1.jar" size="205195" download="eager" />
+    <jar href="lib\lucene-queryparser-4.5.1.jar" size="384884" download="eager" />
+    <jar href="lib\lucene-sandbox-4.5.1.jar" size="45578" download="eager" />
+    <jar href="lib\mongo-java-driver-3.11.2.jar" size="2301836" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\olap4j-0.9.7.309-JS-3.jar" size="445343" download="eager" />
+    <jar href="lib\org-apache-commons-logging.jar" size="60641" download="eager" />
+    <jar href="lib\spring-aop-4.0.1.RELEASE.jar" size="352291" download="eager" />
+    <jar href="lib\spring-aspects-4.0.1.RELEASE.jar" size="52121" download="eager" />
+    <jar href="lib\spring-beans-4.0.1.RELEASE.jar" size="666299" download="eager" />
+    <jar href="lib\spring-build-src-4.0.1.RELEASE.jar" size="71382" download="eager" />
+    <jar href="lib\spring-context-4.0.1.RELEASE.jar" size="973952" download="eager" />
+    <jar href="lib\spring-context-support-4.0.1.RELEASE.jar" size="135237" download="eager" />
+    <jar href="lib\spring-core-4.0.1.RELEASE.jar" size="957701" download="eager" />
+    <jar href="lib\spring-data-commons-2.2.4.RELEASE.jar" size="1213552" download="eager" />
+    <jar href="lib\spring-data-mongodb-2.2.4.RELEASE.jar" size="1760228" download="eager" />
+    <jar href="lib\spring-expression-4.0.1.RELEASE.jar" size="204306" download="eager" />
+    <jar href="lib\spring-framework-bom-4.0.1.RELEASE.jar" size="6287" download="eager" />
+    <jar href="lib\spring-instrument-4.0.1.RELEASE.jar" size="7310" download="eager" />
+    <jar href="lib\spring-instrument-tomcat-4.0.1.RELEASE.jar" size="10486" download="eager" />
+    <jar href="lib\spring-jdbc-4.0.1.RELEASE.jar" size="418729" download="eager" />
+    <jar href="lib\spring-jms-4.0.1.RELEASE.jar" size="209919" download="eager" />
+    <jar href="lib\spring-messaging-4.0.1.RELEASE.jar" size="236780" download="eager" />
+    <jar href="lib\spring-orm-4.0.1.RELEASE.jar" size="363357" download="eager" />
+    <jar href="lib\spring-oxm-4.0.1.RELEASE.jar" size="78901" download="eager" />
+    <jar href="lib\spring-test-4.0.1.RELEASE.jar" size="443197" download="eager" />
+    <jar href="lib\spring-tx-4.0.1.RELEASE.jar" size="248794" download="eager" />
+    <jar href="lib\spring-web-4.0.1.RELEASE.jar" size="662414" download="eager" />
+    <jar href="lib\spring-webmvc-4.0.1.RELEASE.jar" size="655132" download="eager" />
+    <jar href="lib\spring-webmvc-portlet-4.0.1.RELEASE.jar" size="174826" download="eager" />
+    <jar href="lib\spring-websocket-4.0.1.RELEASE.jar" size="259443" download="eager" />
+    <jar href="lib\stax-1.2.0.jar" size="179346" download="eager" />
+    <jar href="lib\stax-api-1.0-2.jar" size="23346" download="eager" />
+    <jar href="lib\stax-api-1.0.1.jar" size="26514" download="eager" />
+    <jar href="lib\swing-layout-1.0.4.jar" size="117420" download="eager" />
+    <jar href="lib\xmlgraphics-commons-1.5.jar" size="601866" download="eager" />
+    <jar href="retail_movie_store_mgmt.jar" size="1707020" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="retail_movie_store_mgmt" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="retail_movie_store_mgmt.Retail_movie_store_mgmt"  name="retail_movie_store_mgmt"  preloader-class="retail_movie_store_mgmt.preloader.retail_movie_store_mgmt_Preloader"/>
+  <update check="always"/>
+</jnlp>

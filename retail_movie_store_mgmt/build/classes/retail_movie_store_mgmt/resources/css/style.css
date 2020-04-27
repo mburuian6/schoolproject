@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 12, 2020, 6:48:18 PM
+    Author     : Ian Mburu
+*/
+
+/*
+.tool-bar{
+    -fx-background-color: #243A51;
+}
+*/
+
+.jfx-hamburger-icon{
+    -fx-spacing: 4px;    
+}
+
+.jfx-hamburger StackPane{
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 30px;
+    -fx-background-radius: 5px;
+}
+
+.setup {
+    -fx-background-color: #4285f4;
+    -fx-text-fill: #ffffff;
+}
+
+
+

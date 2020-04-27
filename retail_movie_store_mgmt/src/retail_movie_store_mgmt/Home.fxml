@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainStackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="690.0" prefWidth="1320.0" stylesheets="@resources/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail_movie_store_mgmt.HomeController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="parentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXToolbar fx:id="toolbar" prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #4285f4;">
+                     <left>
+                        <JFXHamburger fx:id="hamburger" opacity="0.8" prefHeight="117.0" prefWidth="67.0" styleClass="jfx-hamburger" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0" prefWidth="1055.0" text="RMS - Home" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </center>
+                  </JFXToolbar>
+                  <AnchorPane fx:id="contentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="649.0" prefWidth="1320.0">
+                     <children>
+                        <VBox layoutX="-130.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="43.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXDrawer fx:id="drawer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="43.0" style="-fx-background-color: #4285f4;" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="171.0" layoutY="40.0" prefHeight="598.0" prefWidth="883.0" spacing="25.0">
+                           <children>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="137.0" prefWidth="881.0" spacing="25.0">
+                                 <children>
+                                    <AnchorPane prefHeight="137.0" prefWidth="280.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <AnchorPane layoutX="33.0" layoutY="-18.0" prefHeight="64.0" prefWidth="123.0" style="-fx-background-color: #0f9d58;">
+                                             <children>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="69.0" layoutY="49.0" size="36" wrappingWidth="43.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="194.0" layoutY="21.0" prefHeight="25.0" prefWidth="55.0" text="Users" />
+                                          <Label fx:id="userNumber" layoutX="206.0" layoutY="58.0" prefHeight="24.0" prefWidth="43.0" text="1">
+                                             <font>
+                                                <Font name="System Bold" size="26.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="13.0" layoutY="94.0" opacity="0.3" prefHeight="3.0" prefWidth="251.0" />
+                                          <FontAwesomeIconView fill="#11a14d" glyphName="CHEVRON_UP" layoutX="33.0" layoutY="118.0" size="20" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="137.0" prefWidth="280.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <AnchorPane layoutX="33.0" layoutY="-18.0" prefHeight="64.0" prefWidth="123.0" style="-fx-background-color: #4285f4;">
+                                             <children>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" layoutX="69.0" layoutY="49.0" size="36" text="" wrappingWidth="43.0" AnchorPane.bottomAnchor="14.296875" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="175.0" layoutY="18.0" prefHeight="30.0" prefWidth="81.0" text="Customers" />
+                                          <Label fx:id="customerNumber" layoutX="205.0" layoutY="58.0" prefHeight="24.0" prefWidth="43.0" text="0">
+                                             <font>
+                                                <Font name="System Bold" size="26.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="13.0" layoutY="94.0" opacity="0.3" prefHeight="2.0" prefWidth="225.0" />
+                                          <FontAwesomeIconView fill="#11a14d" glyphName="CHEVRON_UP" layoutX="33.0" layoutY="118.0" size="20" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="281.0" layoutY="10.0" prefHeight="137.0" prefWidth="280.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <AnchorPane layoutX="33.0" layoutY="-18.0" prefHeight="64.0" prefWidth="123.0" style="-fx-background-color: #751DB3;">
+                                             <children>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="TH_LIST" layoutX="69.0" layoutY="49.0" size="36" wrappingWidth="43.0" AnchorPane.bottomAnchor="14.296875" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="174.0" layoutY="21.0" prefHeight="25.0" prefWidth="81.0" text="Preorders" />
+                                          <Label fx:id="preorderNumber" layoutX="203.0" layoutY="58.0" prefHeight="24.0" prefWidth="43.0" text="0">
+                                             <font>
+                                                <Font name="System Bold" size="26.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="13.0" layoutY="94.0" opacity="0.3" prefHeight="2.0" prefWidth="225.0" />
+                                          <FontAwesomeIconView fill="#11a14d" glyphName="CHEVRON_UP" layoutX="33.0" layoutY="118.0" size="20" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="157.0" prefWidth="583.0" spacing="25.0">
+                                 <children>
+                                    <VBox prefHeight="157.0" prefWidth="281.0" style="-fx-background-color: FFF;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="289.0" style="-fx-background-color: #4285f4;" text=" WANT TO VIEW ALL RECORDS?" textFill="WHITE" />
+                                          <JFXButton onAction="#viewMediaPurchases" prefHeight="25.0" prefWidth="287.0" text="MEDIA PURCHASE" textAlignment="CENTER" />
+                                          <JFXButton layoutX="10.0" layoutY="37.0" onAction="#viewSoftwarePurchases" prefHeight="25.0" prefWidth="287.0" text="SOFTWARE PURCHASE" />
+                                          <JFXButton layoutX="10.0" layoutY="37.0" onAction="#viewMediaSales" prefHeight="25.0" prefWidth="286.0" text="MEDIA SALES" />
+                                          <JFXButton layoutX="10.0" layoutY="62.0" onAction="#viewSoftwareSales" prefHeight="25.0" prefWidth="284.0" text="SOFTWARE SALES" />
+                                          <JFXButton layoutX="10.0" layoutY="112.0" onAction="#viewPreorders" prefHeight="25.0" prefWidth="287.0" text="PREORDERS" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="157.0" prefWidth="282.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="27.0" prefWidth="282.0" style="-fx-background-color: #4285f4;" text="WANT TO GENERATE REPORTS?" textFill="WHITE" />
+                                          <JFXButton layoutX="10.0" layoutY="37.0" onAction="#getMediaSalesReport" prefHeight="25.0" prefWidth="292.0" text="MEDIA SALES" />
+                                          <JFXButton layoutX="10.0" layoutY="62.0" onAction="#getSoftwareSalesReport" prefHeight="25.0" prefWidth="295.0" text="SOFTWARE SALES" />
+                                          <JFXButton layoutX="10.0" layoutY="87.0" onAction="#getProductReport" prefHeight="25.0" prefWidth="299.0" text="PRODUCT" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Separator prefWidth="200.0" />
+                              <HBox prefHeight="255.0" prefWidth="886.0" spacing="25.0">
+                                 <children>
+                                    <BarChart fx:id="salesBarChart" prefHeight="246.0" prefWidth="876.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="1060.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="590.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <VBox layoutX="1070.0" layoutY="7.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="620.0" prefWidth="245.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="1070.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="7.0">
+                           <children>
+                              <Label fx:id="toDoHeaderLbl" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="252.0" style="-fx-background-color: #ffc800;" text="To Do" textFill="#655656">
+                                 <font>
+                                    <Font name="Algerian" size="20.0" />
+                                 </font>
+                              </Label>
+                              <JFXListView fx:id="todoListView" prefHeight="329.0" prefWidth="245.0">
+                                 <tooltip>
+                                    <Tooltip text="To deselect an item use Ctrl+Click" wrapText="true" />
+                                 </tooltip></JFXListView>
+                              <Pane prefHeight="261.0" prefWidth="245.0">
+                                 <children>
+                                    <PieChart fx:id="pieChart" layoutX="-5.0" prefHeight="261.0" prefWidth="251.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

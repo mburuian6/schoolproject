@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="544.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail_movie_store_mgmt.LoginPageController">
+   <children>
+      <HBox prefHeight="544.0" prefWidth="683.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="544.0" prefWidth="304.0" style="-fx-background-color: #4285f4;">
+               <children>
+                  <Label layoutX="91.0" layoutY="228.0" prefHeight="64.0" prefWidth="143.0" text="Login" textFill="#f8f8f8">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="24" />
+                     </graphic>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="544.0" prefWidth="380.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="123.0" prefHeight="31.0" prefWidth="244.0" text="Select User Account">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="showUsersField" layoutX="44.0" layoutY="165.0" prefHeight="25.0" prefWidth="244.0" promptText="click here to select user" />
+                  <Button layoutX="82.0" layoutY="323.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #f8f8f8; -fx-underline: true;" text="Forgot Password?">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FROWN_ALT" size="15.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="loginBtn" layoutX="166.0" layoutY="275.0" mnemonicParsing="false" onAction="#getInput" prefHeight="17.0" prefWidth="118.0" text="Login" />
+                  <Button cancelButton="true" layoutX="34.0" layoutY="275.0" mnemonicParsing="false" onAction="#cancel" prefHeight="17.0" prefWidth="118.0" text="Cancel" />
+                  <JFXPasswordField fx:id="passwordField" focusColor="#959597" labelFloat="true" layoutX="44.0" layoutY="217.0" onAction="#getInput" prefHeight="25.0" prefWidth="244.0" promptText="Password" />
+                  <FontAwesomeIconView glyphName="KEY" layoutX="263.0" layoutY="234.0" size="18.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="171.0" style="-fx-background-color: #4285f4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail_movie_store_mgmt.SideMenuController">
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" prefWidth="176.0">
+         <children>
+            <Label fx:id="userLabel" alignment="CENTER" layoutY="21.0" prefHeight="34.0" prefWidth="176.0" text="User" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="22.0" />
+               </font></Label>
+         </children></Pane>
+      <Accordion style="-fx-background-color: #4285f4;" />
+      <Separator layoutX="10.0" layoutY="132.0" prefWidth="200.0" />
+      <JFXButton layoutX="10.0" layoutY="339.0" onAction="#openAddSale" prefHeight="34.0" prefWidth="193.0" text="NEW SALE" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="10.0" layoutY="188.0" prefWidth="200.0" />
+      <JFXButton layoutX="10.0" layoutY="65.0" onAction="#openMediaInventory" prefHeight="46.0" prefWidth="171.0" text="MEDIA                     INVENTORY " textFill="WHITE" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="10.0" layoutY="99.0" onAction="#openSoftwareInventory" prefHeight="49.0" prefWidth="171.0" text="SOFTWARE                        INVENTORY" textFill="WHITE" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="10.0" layoutY="62.0" prefWidth="200.0" />
+      <JFXButton layoutX="10.0" layoutY="65.0" onAction="#openMediaPurchase" prefHeight="43.0" prefWidth="171.0" text="NEW MEDIA                PURCHASE" textFill="WHITE" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="10.0" layoutY="435.0" onAction="#openSoftwarePurchase" prefHeight="44.0" prefWidth="171.0" text="NEW SOFTWARE PURCHASE" textFill="WHITE" wrapText="true">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="10.0" layoutY="430.0" prefWidth="200.0" />
+      <JFXButton onAction="#openTodo" prefHeight="34.0" prefWidth="187.0" text="TO DO" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BELL" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="10.0" layoutY="135.0" onAction="#openUsers" prefHeight="33.0" prefWidth="190.0" text="USERS" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USERS" onDragDetected="#openUsers" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="10.0" layoutY="188.0" onAction="#openCustomers" prefHeight="33.0" prefWidth="186.0" text="CUSTOMERS" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="GAMEPAD" />
+         </graphic>
+      </JFXButton>
+      <Separator prefWidth="200.0" />
+      <JFXButton layoutX="10.0" layoutY="135.0" onAction="#openPreorders" prefHeight="42.0" prefWidth="206.0" text="PREORDERS" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MONEY" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="10.0" layoutY="222.0" prefWidth="200.0" />
+      <JFXButton layoutX="10.0" layoutY="228.0" onAction="#generateLogReport" prefHeight="34.0" prefWidth="176.0" text="LOG REPORT" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="10.0" layoutY="225.0" onAction="#changePassword" prefHeight="34.0" prefWidth="176.0" text="CHANGE PASS" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="KEY" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="10.0" layoutY="188.0" onAction="#openLogout" prefHeight="34.0" prefWidth="176.0" text="LOGOUT" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" />
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>
