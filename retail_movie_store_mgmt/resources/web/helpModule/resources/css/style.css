@@ -1,0 +1,27 @@
+
+.blue-background{
+    background-color: #31b0d5;
+}
+
+
+.font-serif-white{
+    color: floralwhite;
+    font-family: serif;
+}
+
+.lightblue-background{
+    background-color: cornflowerblue;
+}
+
+.font-serif-black{
+    color: black;
+}
+
+#footer-background{
+    background-color: #31b0d5;
+    color: lightyellow;
+}
+
+#page-background{
+    background-color: #e6f7ff;
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="650.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail_movie_store_mgmt.ToDoController">
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="1002.0" style="-fx-background-color: #4285f4;">
+         <children>
+            <Label layoutX="21.0" layoutY="11.0" text="To Do" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Pane layoutX="1172.0" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="128.0">
+               <children>
+                  <Button layoutX="5.0" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Back" textFill="WHITE">
+                     <tooltip>
+                        <Tooltip text="Press here to go back" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="502.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+         <items>
+            <AnchorPane fx:id="anchorPane">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="To Do" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                     </textFill>
+                  </Label>
+                  <VBox layoutX="11.0" layoutY="44.0" prefHeight="507.0" prefWidth="311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="44.0">
+                     <children>
+                        <ListView fx:id="beforeListView" prefHeight="374.0" prefWidth="288.0">
+                           <VBox.margin>
+                              <Insets left="2.0" />
+                           </VBox.margin></ListView>
+                        <Button layoutX="10.0" layoutY="348.0" mnemonicParsing="false" onAction="#updateItem" prefHeight="27.0" prefWidth="321.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Update Item" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="375.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="27.0" prefWidth="319.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Delete Item" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="387.0" mnemonicParsing="false" onAction="#refresh" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Refresh" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+               <content>
+                  <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="643.0">
+                     <children>
+                        <Pane layoutX="41.0" layoutY="21.0" prefHeight="507.0" prefWidth="520.0" style="-fx-border-color: #4285f4; -fx-border-radius: 1em;">
+                           <children>
+                              <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="1.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                              <GridPane layoutX="67.0" layoutY="55.0" prefHeight="239.0" prefWidth="386.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="28.0" prefWidth="189.0" text="Title">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="24.0" prefHeight="38.0" prefWidth="189.0" text="Reminder Date" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="90.0" prefHeight="38.0" prefWidth="189.0" text="Description" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="titleField" promptText="enter name of task" GridPane.columnIndex="1" />
+                                    <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="194.0" promptText="choose date to do this task..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextArea fx:id="descriptionArea" prefHeight="200.0" prefWidth="200.0" promptText="describe task here" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Button fx:id="newValSubmitBtn" layoutX="328.0" layoutY="353.0" mnemonicParsing="false" onAction="#submitNewItem" prefHeight="27.0" prefWidth="125.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Submit New Item" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Past Items" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <VBox layoutX="34.0" layoutY="48.0" prefHeight="276.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="48.0">
+                     <children>
+                        <ListView fx:id="afterListView" prefHeight="507.0" prefWidth="319.0">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets right="2.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="11.0" fx:id="x3" />
+               </font>
+               <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+               </textFill>
+            </Label>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

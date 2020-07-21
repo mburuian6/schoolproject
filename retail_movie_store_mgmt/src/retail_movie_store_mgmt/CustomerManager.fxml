@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail_movie_store_mgmt.CustomerManagerController">
+   <children>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="89.0" prefWidth="1000.0" style="-fx-background-color: #4285f4;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" text="Customers" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <items>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Customers" textAlignment="CENTER" wrapText="false" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                     </textFill>
+                  </Label>
+                  <VBox layoutX="14.0" layoutY="40.0" prefHeight="501.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+                     <children>
+                        <ListView fx:id="allCustomersListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="417.0" prefWidth="227.0" />
+                        <Button mnemonicParsing="false" onAction="#emptyAllFields" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Clear All Fields" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="374.0" mnemonicParsing="false" onAction="#updateCustomer" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Update Customer" textFill="WHITE" />
+                        <Button layoutX="10.0" layoutY="401.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Delete Customer" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <ScrollPane prefHeight="541.0" prefWidth="537.0">
+               <content>
+                  <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="571.0">
+                     <children>
+                        <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <VBox layoutX="18.0" layoutY="50.0" prefHeight="451.0" prefWidth="535.0" spacing="10.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="36.0">
+                           <children>
+                              <GridPane prefHeight="90.0" prefWidth="460.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <VBox.margin>
+                                    <Insets left="16.0" top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label text="Customer username">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
+                                    <Label text="Customer name" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
+                                    <TextField fx:id="usernameField" layoutX="245.0" layoutY="13.0" GridPane.columnIndex="1" />
+                                    <TextField fx:id="nameField" layoutX="245.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Pane prefHeight="32.0" prefWidth="535.0">
+                                 <children>
+                                    <HBox layoutX="12.0" prefHeight="34.0" prefWidth="523.0">
+                                       <children>
+                                          <Label prefHeight="29.0" prefWidth="64.0" text="Gender">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="customRadioButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" selected="true" text="Custom">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="genderToggle" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" prefHeight="57.0" prefWidth="68.0" text="Male" toggleGroup="$genderToggle" />
+                                          <RadioButton fx:id="femaleRadioButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="67.0" text="Female" toggleGroup="$genderToggle" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="280.0" prefWidth="545.0">
+                                 <children>
+                                    <Label layoutX="14.0" prefHeight="17.0" prefWidth="105.0" text="Likes">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font></Label>
+                                    <Accordion layoutX="14.0" layoutY="25.0" prefHeight="231.0" prefWidth="441.0">
+                                      <panes>
+                                          <TitledPane animated="false" layoutX="10.0" layoutY="10.0" prefHeight="179.0" prefWidth="441.0" text="Movies">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox prefHeight="175.0" prefWidth="437.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <VBox prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="actionMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Action" />
+                                                                  <CheckBox fx:id="adventureMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Adventure" />
+                                                                  <CheckBox fx:id="animationMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Animation" />
+                                                                  <CheckBox fx:id="historyMovieBox" layoutX="10.0" layoutY="54.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="History" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="10.0" layoutY="10.0" prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="comedyMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Comedy" />
+                                                                  <CheckBox fx:id="crimeMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Crime" />
+                                                                  <CheckBox fx:id="documentaryMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Documentary" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="110.0" layoutY="10.0" prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="horrorMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Horror" />
+                                                                  <CheckBox fx:id="musicMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Music" />
+                                                                  <CheckBox fx:id="scifiMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Scifi" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="210.0" layoutY="10.0" prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="thrillerMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Thriller" />
+                                                                  <CheckBox fx:id="romanceMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Romance" />
+                                                                  <CheckBox fx:id="warMovieBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="War" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TitledPane>
+                                        <TitledPane animated="false" prefWidth="478.0" text="TV Series">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="439.0">
+                                                   <children>
+                                                      <HBox prefHeight="175.0" prefWidth="437.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <VBox prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="actionShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Action" />
+                                                                  <CheckBox fx:id="adventureShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Adventure" />
+                                                                  <CheckBox fx:id="animationShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Animation" />
+                                                                  <CheckBox fx:id="historyShowsBox" layoutX="10.0" layoutY="54.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="History" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="10.0" layoutY="10.0" prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="comedyShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Comedy" />
+                                                                  <CheckBox fx:id="crimeShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Crime" />
+                                                                  <CheckBox fx:id="documentaryShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Documentary" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="110.0" layoutY="10.0" prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="horrorShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Horror" />
+                                                                  <CheckBox fx:id="musicShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Music" />
+                                                                  <CheckBox fx:id="scifiShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Scifi" />
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox layoutX="210.0" layoutY="10.0" prefHeight="116.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <CheckBox fx:id="thrillerShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Thriller" />
+                                                                  <CheckBox fx:id="romanceShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="Romance" />
+                                                                  <CheckBox fx:id="warShowsBox" mnemonicParsing="false" prefHeight="22.0" prefWidth="108.0" text="War" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                        </TitledPane>
+                                      </panes>
+                                    </Accordion>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <Button layoutX="254.0" layoutY="504.0" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Back To Home" textFill="WHITE" />
+                        <Button fx:id="newCustomerSubmitBtn" layoutX="397.0" layoutY="504.0" mnemonicParsing="false" onAction="#enterCustomer" prefHeight="27.0" prefWidth="148.0" style="-fx-background-color: #4285f4; -fx-border-color: #FFF;" text="Submit New" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane>
+               <children>
+                  <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Stats" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <VBox layoutX="7.0" layoutY="72.0" prefHeight="462.0" prefWidth="296.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
+                     <children>
+                        <Pane prefHeight="366.0" prefWidth="296.0">
+                           <children>
+                              <PieChart fx:id="usersPieChart" labelLineLength="1.0" layoutX="-3.0" layoutY="-1.0" prefHeight="188.0" prefWidth="296.0" title="Customer Distribution" />
+                           </children>
+                        </Pane>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="numLabel" prefHeight="30.0" prefWidth="146.0" text="Num" textAlignment="RIGHT">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Click here to get the percentage" />
+                                 </tooltip>
+                                 <GridPane.margin>
+                                    <Insets left="80.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="percentageLabel" prefHeight="30.0" prefWidth="148.0" GridPane.columnIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="Click here to get the percentage" />
+                                 </tooltip>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <Separator prefHeight="34.0" prefWidth="296.0" />
+                        <PieChart fx:id="moviePieChart" prefWidth="296.0" title="Movies" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="11.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#generateReport" prefHeight="25.0" prefWidth="97.0" style="-fx-border-radius: 10;" text="Generate Report" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="34.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="11.0" fx:id="x3" />
+               </font>
+               <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+               </textFill>
+            </Label>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

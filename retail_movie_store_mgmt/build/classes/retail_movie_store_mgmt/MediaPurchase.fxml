@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" stylesheets="@resources/css/bootstrap3.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="retail_movie_store_mgmt.MediaPurchaseController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="76.0" prefWidth="1000.0" style="-fx-background-color: #4285f4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="38.0" layoutY="20.0" text="Media Purchases" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" cancelButton="true" layoutX="1235.0" layoutY="32.0" onAction="#back" stylesheets="@resources/css/style.css" text="Back">
+                     <styleClass>
+                        <String fx:value="sm" />
+                        <String fx:value="setup" />
+                     </styleClass></JFXButton>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane layoutX="24.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="557.0" prefWidth="1273.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="View">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="918.0">
+                                 <children>
+                                    <TableView fx:id="todayPurchasesTable" editable="true" layoutX="14.0" layoutY="45.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="465.0" prefWidth="493.0" style="-fx-border-radius: 10; -fx-border-color: #a6a6a6;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="396.0" AnchorPane.topAnchor="45.0">
+                                       <columns>
+                                          <TableColumn fx:id="idColumn" prefWidth="126.0" text="id" />
+                                          <TableColumn fx:id="titleColumn" prefWidth="363.0" text="title" />
+                                          <TableColumn fx:id="totalColumn" prefWidth="126.0" text="total" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Pane layoutX="900.0" layoutY="17.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="486.0" prefWidth="359.0" style="-fx-border-radius: 10; -fx-border-color: #a6a6a6;">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="359.0" text="Want to delete an entry?" underline="true">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="30.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label layoutX="32.0" layoutY="49.0" prefHeight="27.0" prefWidth="294.0" text="Paste purchase id here">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Pane layoutX="21.0" layoutY="218.0" prefHeight="204.0" prefWidth="302.0" style="-fx-border-radius: 10;">
+                                             <children>
+                                                <Label layoutX="3.0" layoutY="4.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="196.0" prefWidth="296.0" style="-fx-border-radius: 10; -fx-background-color: #33adff;" text="Please note that once an entry is deleted , it is gone for good. It can no longer be retrieved from the system" textAlignment="CENTER" textFill="#f8f6f6" wrapText="true">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Button layoutX="129.0" layoutY="133.0" mnemonicParsing="false" onAction="#deletePurchase" prefHeight="32.0" prefWidth="100.0" style="-fx-border-color: #a6a6a6;" text="Delete" />
+                                          <Separator layoutX="32.0" layoutY="180.0" prefHeight="13.0" prefWidth="303.0" />
+                                          <TextField fx:id="delField" layoutX="33.0" layoutY="83.0" prefWidth="301.0" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="14.0" layoutY="10.0" prefHeight="35.0" prefWidth="111.0" text="Today's Entries-">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="125.0" layoutY="14.0" prefHeight="28.0" prefWidth="380.0" text="Click id to copy id text to the delete box">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Add">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="13.0" layoutY="14.0" prefHeight="489.0" prefWidth="546.0" style="-fx-border-color: #4285f4; -fx-border-radius: 10;">
+                                       <children>
+                                          <Button defaultButton="true" layoutX="273.0" layoutY="222.0" mnemonicParsing="false" onAction="#addPurchase" prefHeight="32.0" prefWidth="122.0" text="Submit">
+                                             <styleClass>
+                                                <String fx:value="success" />
+                                                <String fx:value="action-btn" />
+                                             </styleClass>
+                                          </Button>
+                                       </children></Pane>
+                                    <Separator layoutX="592.0" layoutY="7.0" orientation="VERTICAL" prefHeight="516.0" prefWidth="0.0" />
+                                    <ListView fx:id="currentItemsView" layoutX="614.0" layoutY="56.0" prefHeight="437.0" prefWidth="390.0" />
+                                    <VBox layoutX="30.0" layoutY="44.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="168.0" prefWidth="503.0" spacing="30.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="435.0" text="Please enter the details of the new entry here">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane prefHeight="318.0" prefWidth="503.0" vgap="20.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="27.0" prefWidth="173.0" text="Title">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="11.0" layoutY="19.0" prefHeight="27.0" prefWidth="173.0" text="Quantity" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="quantityField" layoutX="279.0" layoutY="15.0" prefHeight="74.0" prefWidth="241.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label layoutX="10.0" layoutY="36.0" prefHeight="27.0" prefWidth="173.0" text="Price" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="titlesBox" prefWidth="247.0" GridPane.columnIndex="1" />
+                                                <TextField fx:id="priceField" layoutX="262.0" layoutY="101.0" prefHeight="74.0" prefWidth="241.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="20.0" />
+                                       </padding>
+                                    </VBox>
+                                    <Label layoutX="614.0" layoutY="28.0" prefHeight="28.0" prefWidth="390.0" text="Currently entered entries">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
